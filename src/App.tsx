@@ -25,10 +25,12 @@ import { NotificationsPage } from './pages/notifications/NotificationsPage';
 import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
-import { DealsPage } from './pages/deals/DealsPage'
+import { DealsPage } from './pages/deals/DealsPage';
 import { MeetingsPage } from './pages/meetings/MeetingsPage';
 import { VideoCallPage } from './pages/videocall/VideoCallPage';
 import { DocumentChamberPage } from './pages/documents/DocumentChamberPage';
+import { PaymentPage } from './pages/payments/PaymentPage';
+import { SecurityPage } from './pages/security/SecurityPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
@@ -86,16 +88,27 @@ function App() {
           <Route path="/deals" element={<DashboardLayout />}>
             <Route index element={<DealsPage />} />
           </Route>
-          <Route path="/meetings" element={<DashboardLayout />}>
-  <Route index element={<MeetingsPage />} />
-</Route>
-          <Route path="/videocall" element={<DashboardLayout />}>
-  <Route index element={<VideoCallPage />} />
-</Route>
 
-<Route path="/document-chamber" element={<DashboardLayout />}>
-  <Route index element={<DocumentChamberPage />} />
-</Route>
+          <Route path="/meetings" element={<DashboardLayout />}>
+            <Route index element={<MeetingsPage />} />
+          </Route>
+
+          <Route path="/videocall" element={<DashboardLayout />}>
+            <Route index element={<VideoCallPage />} />
+          </Route>
+
+          <Route path="/document-chamber" element={<DashboardLayout />}>
+            <Route index element={<DocumentChamberPage />} />
+          </Route>
+
+          <Route path="/payments" element={<DashboardLayout />}>
+            <Route index element={<PaymentPage />} />
+          </Route>
+
+          <Route path="/security" element={<DashboardLayout />}>
+            <Route index element={<SecurityPage />} />
+          </Route>
+
           {/* Chat Routes */}
           <Route path="/chat" element={<DashboardLayout />}>
             <Route index element={<ChatPage />} />
